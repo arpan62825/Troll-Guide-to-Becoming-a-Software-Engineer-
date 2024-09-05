@@ -4,6 +4,7 @@ const declineCookies = document.querySelector(".decline-cookies");
 const cookieParagraph = document.querySelector(".cookie-paragraph");
 const cookieClose = document.querySelector(".cookie-close");
 const cookieForm = document.querySelector("#cookie-form");
+const cookieButtons = document.querySelector(".cookie-buttons")
 
 setTimeout(() => {
   cookieConsent.style.display = "block";
@@ -50,3 +51,9 @@ cookieForm.addEventListener("submit", (e) => {
 cookieClose.addEventListener("click", () => {
   cookieConsent.style.display = "none";
 });
+
+["mouseenter", "click"].forEach((e) => {
+  declineCookies.addEventListener(e, () => {
+    cookieButtons.classList.toggle("reverse")
+  })
+})
