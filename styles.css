@@ -85,7 +85,7 @@ body {
 }
 
 .home-section img {
-  display: none; /* Hide any additional images in this section */
+  display: none; 
 }
 
 /* Steps Section */
@@ -167,18 +167,18 @@ footer {
 }
 
 footer a {
-  color: #b3ddb3; /* A light color for better visibility */
+  color: #b3ddb3; 
   text-decoration: none;
-  font-weight: bold; /* Make the link stand out */
+  font-weight: bold; 
 }
 
 footer a:hover {
-  text-decoration: underline; /* Underline on hover for better visibility */
+  text-decoration: underline; 
 }
 
 .contact-highlight {
-  color: #b3ddb3; /* Match the link color for consistency */
-  font-weight: bold; /* Make the highlight stand out */
+  color: #b3ddb3; 
+  font-weight: bold;
 }
 
 /* Cookie Consent Styles */
@@ -204,7 +204,7 @@ footer a:hover {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 30px; /* Larger size for better visibility */
+  font-size: 30px; 
   cursor: pointer;
   background: none;
   border: none;
@@ -212,7 +212,7 @@ footer a:hover {
 }
 
 .cookie-close:hover {
-  color: #ff6347; /* Change color on hover for better attention */
+  color: #ff6347; 
 }
 
 .cookie-buttons {
@@ -223,19 +223,19 @@ footer a:hover {
 }
 
 .cookie-buttons button {
-  background-color: #ff6347; /* Bright color for high visibility */
+  background-color: #ff6347; 
   color: #fff;
   border: none;
-  padding: 15px 25px; /* Larger padding for bigger buttons */
+  padding: 15px 25px; 
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 4px 4px whitesmoke;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  font-size: 18px; /* Larger font size for better readability */
+  font-size: 18px; 
 }
 
 .cookie-buttons button:hover {
-  background-color: #ff4500; /* Slightly darker color on hover */
+  background-color: #ff4500; 
   box-shadow: 4px 4px 6px whitesmoke;
 }
 
@@ -252,7 +252,7 @@ footer a:hover {
 }
 
 #cookie-form input {
-  width: calc(100% - 20px); /* Full width with padding adjustment */
+  width: calc(100% - 20px); 
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
