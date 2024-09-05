@@ -38,7 +38,7 @@ cookieForm.addEventListener("submit", (e) => {
 
     setTimeout(() => {
       cookieParagraph.innerHTML = `
-      <img src="giphy.webp" />
+      <img src="giphy.webp" class="troll-gif"/>
       <p class="submit-paragraph-2">
       Thanks Sucker or should I say <span id="user-name-formData">${userName}</span>? We just sold the rights to your eternal soul.
       </p>
