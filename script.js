@@ -1,3 +1,22 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  push,
+} from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+
+const firebaseConfig = {
+  databaseURL:
+    "https://troll-guide-default-rtdb.asia-southeast1.firebasedatabase.app",
+};
+
+//Initialize firebase
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const refInDB1 = ref(database, "Names");
+const refInDB2 = ref(database, "Emails");
+
 const cookieConsent = document.querySelector("#cookie-consent");
 const acceptCookies = document.querySelector(".accept-cookies");
 const declineCookies = document.querySelector(".decline-cookies");
@@ -5,6 +24,8 @@ const cookieParagraph = document.querySelector(".cookie-paragraph");
 const cookieClose = document.querySelector(".cookie-close");
 const cookieForm = document.querySelector("#cookie-form");
 const cookieButtons = document.querySelector(".cookie-buttons");
+const userNameInput = document.querySelector("#name");
+const userEmailInput = document.querySelector("#email");
 
 setTimeout(() => {
   cookieConsent.style.display = "block";
@@ -56,4 +77,9 @@ cookieClose.addEventListener("click", () => {
   declineCookies.addEventListener(e, () => {
     cookieButtons.classList.toggle("reverse");
   });
+});
+
+acceptCookies.addEventListener("click", () => {
+  push(refInDB1, userNameInput.value);
+  push(refInDB2, userEmailInput.value);
 });
