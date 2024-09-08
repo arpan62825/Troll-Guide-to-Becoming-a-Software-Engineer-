@@ -14,8 +14,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-const refInDB1 = ref(database, "Names");
-const refInDB2 = ref(database, "Emails");
+const referenceInDB1 = ref(database, "Names");
+const referenceInDB2 = ref(database, "Emails");
 
 const cookieConsent = document.querySelector("#cookie-consent");
 const acceptCookies = document.querySelector(".accept-cookies");
@@ -80,6 +80,6 @@ cookieClose.addEventListener("click", () => {
 });
 
 acceptCookies.addEventListener("click", () => {
-  push(refInDB1, userNameInput.value);
-  push(refInDB2, userEmailInput.value);
+  push(referenceInDB1, userNameInput.value);
+  push(referenceInDB2, userEmailInput.value);
 });
